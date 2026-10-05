@@ -1,0 +1,17 @@
+bin/
+obj/
+.vs/
+*.user
+TestResults/
+
+# Flutter (created in Phase 0)
+apps/phone/.dart_tool/
+apps/phone/build/
+apps/phone/.flutter-plugins*
+apps/phone/.packages
+
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example

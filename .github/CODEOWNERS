@@ -1,0 +1,12 @@
+# Reviews are requested from owners of touched paths.
+# Handles: danbubu = Bubu, allan-osei = Allan, kkopong = Nissi, Nana-asante-nocturnal = Virgil
+
+*                                   @danbubu
+
+/src/protocol/                      @allan-osei @danbubu
+/apps/host/                         @allan-osei @danbubu
+/apps/phone/                        @kkopong @danbubu
+/docs/                              @danbubu
+/docs/reference/                    @danbubu @Nana-asante-nocturnal
+/AGENTS.md                          @danbubu
+/.cursor/                           @danbubu

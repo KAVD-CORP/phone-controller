@@ -1,0 +1,12 @@
+---
+description: Phone Controller rules (Flutter phone, .NET host, UDP snapshots)
+alwaysApply: true
+---
+
+Read `AGENTS.md` first.
+
+- Phone is Flutter. Host is .NET 9 on Windows. Virtual pad is VIIPER by default, ViGEm only as a fallback behind one interface.
+- Wire format is `docs/PROTOCOL.md`. Snapshots, not events. No JSON on the wire.
+- Interface haptics are local. Gyro is touch-gated. Silence releases inputs.
+- Do not vendor kernel drivers. Do not claim real trigger resistance.
+- Run `dotnet test` before finishing. Run Flutter tests too once `apps/phone` exists.
