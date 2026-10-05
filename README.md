@@ -12,7 +12,8 @@ A **public** KAVD Corp repository. MIT license. Outside contributions are welcom
 4. `docs/PROTOCOL.md` — the 36-byte snapshot.
 5. `docs/adr/` — Flutter, VIIPER, UDP, Bluetooth spike.
 6. `docs/reference/Phone_Controller_Feasibility.docx` — the brief (4 Oct 2026).
-7. `docs/PROMPTS.md` — phase prompts for Cursor.
+7. `docs/KICKOFF_PROMPTS.md` — first Cursor session for Nissi, Allan, Bubu, and Virgil.
+8. `docs/PROMPTS.md` — phase prompts for Cursor.
 
 ## What runs today
 

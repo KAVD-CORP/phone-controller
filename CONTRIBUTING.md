@@ -25,7 +25,7 @@ dotnet run --project apps/host
 
 ## Branching
 
-`main` stays buildable. Branch `feat/…`, `fix/…`, `docs/…`. One phase from `docs/PROMPTS.md` per PR. Squash-merge with a Conventional Commit title.
+`main` stays buildable. Branch `feat/…`, `fix/…`, `docs/…`. One phase from `docs/PROMPTS.md` per PR. Your first session is the block with your name in `docs/KICKOFF_PROMPTS.md`. Squash-merge with a Conventional Commit title.
 
 ## Rules that keep the project open
 

@@ -12,6 +12,7 @@ You are working on **Phone Controller**, a public KAVD Corp project: a phone use
 | Why Flutter, why VIIPER, why UDP | `docs/adr/` |
 | The original brief (layouts, haptics, risks) | `docs/reference/Phone_Controller_Feasibility.docx` |
 | Which prompt to run | `docs/PROMPTS.md` |
+| First session for your role | `docs/KICKOFF_PROMPTS.md` |
 | How to build | `CONTRIBUTING.md` |
 
 ## Stack (do not substitute)

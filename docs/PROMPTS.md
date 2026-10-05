@@ -2,9 +2,9 @@
 
 Paste one phase into a fresh Agent chat. Every prompt starts by reading `AGENTS.md`. This repo is public: do not add KAVD-only secrets, and do not vendor driver binaries.
 
-Roles: **phone** = Flutter layouts (Nissi, Bubu secondary), **host** = Windows virtual pad (Allan), **QA** = latency and feel (Bubu).
+The first session for each person is `docs/KICKOFF_PROMPTS.md`. Roles match the other KAVD repos: **@Frontend** Nissi (Bubu secondary), **@Backend** Allan, **@QA** Bubu (Nissi secondary), **@Design** Virgil.
 
-## Phase 0 — Phone skeleton
+## Phase 0 — Phone skeleton (@Frontend)
 
 ```
 Read AGENTS.md, docs/TECH_STACK.md, docs/PROTOCOL.md and docs/adr/0001.
@@ -19,7 +19,7 @@ Then:
 Run flutter analyze && flutter test. Open a PR titled "Phase 0: Flutter skeleton and Dart wire codec".
 ```
 
-## Phase 1 — Playable path
+## Phase 1 — Playable path (@Backend + @Frontend)
 
 ```
 Read docs/ARCHITECTURE.md, docs/PROTOCOL.md, docs/adr/0002 and docs/adr/0003.
@@ -38,7 +38,7 @@ Phone:
 Exit: joy.cpl shows the pad moving from the phone, in one test game. Record p50/p95 snapshot age on Wi-Fi in the PR. Run dotnet test and flutter test.
 ```
 
-## Phase 2 — Haptics
+## Phase 2 — Haptics (@Frontend + @Backend)
 
 ```
 Read feasibility brief section 6 and docs/ARCHITECTURE.md section 5.
@@ -51,7 +51,7 @@ Read feasibility brief section 6 and docs/ARCHITECTURE.md section 5.
 Do not block iOS on Android-only primitives.
 ```
 
-## Phase 3 — Motion
+## Phase 3 — Motion (@Frontend + @Backend)
 
 ```
 Read feasibility brief section 7.
@@ -63,7 +63,7 @@ Read feasibility brief section 7.
 5. Android volume rocker as two digital buttons while the app is foregrounded. If iOS cannot do this, hide the option. Do not fake it.
 ```
 
-## Phase 4 — Adaptive layout
+## Phase 4 — Adaptive layout (@Design + @Frontend)
 
 ```
 Read feasibility brief section 10 (breakthrough fixes).
@@ -74,7 +74,7 @@ Read feasibility brief section 10 (breakthrough fixes).
 Do not auto-switch so aggressively that the pad feels haunted. Cap the shift and show a one-line "layout adjusted" toast the first time.
 ```
 
-## Phase 5 — Driverless spike
+## Phase 5 — Driverless spike (@Backend)
 
 ```
 Read docs/adr/0004. Android only.
@@ -84,6 +84,26 @@ Prototype Bluetooth HID gamepad output. Measure p50/p95 against the UDP path on 
 
 ## Standing reviews
 
-- **Feel review:** "Play Claw and Slide for ten minutes in <game>. List every time you looked at the phone, and why."
-- **Protocol review:** "Diff the Dart encoder against docs/PROTOCOL.md and tests/protocol. List any byte that can disagree."
-- **Driver review:** "Confirm this PR does not vendor a .sys, does not require ViGEm for the default path, and releases inputs after silence."
+### Feel review (@QA)
+
+```
+Play Claw and Slide for ten minutes in <game>. List every time you looked at the phone, and why. Do not change code.
+```
+
+### Protocol review (@QA)
+
+```
+Diff the Dart encoder against docs/PROTOCOL.md and tests/protocol. List any byte that can disagree. Do not change code.
+```
+
+### Driver review (@QA)
+
+```
+Confirm this PR does not vendor a .sys, does not require ViGEm for the default path, and releases inputs after 100 ms of silence. Do not change code.
+```
+
+## Design prompts (@Design)
+
+```
+Read docs/ARCHITECTURE.md §4 and the layout section of docs/reference/Phone_Controller_Feasibility.docx. Write or update docs/design/LAYOUTS.md for <layout>: which finger owns which zone in landscape, what a mis-press feels like, and what this layout refuses to do. Do not edit apps/phone or apps/host.
+```
